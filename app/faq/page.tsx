@@ -19,16 +19,16 @@ export default function FAQPage() {
                 <PageBanner />
                 <LanguageToggle />
 
-                <section className="max-w-7xl mx-auto px-6 py-12">
-                    <h1 className="text-2xl text-gray-700">{t.faq.title[lang]}</h1>
-                    <p className="mt-1 tracking-[0.3em] text-gray-500 text-xs">{t.faq.sub[lang]}</p>
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+                    <h1 className="text-xl sm:text-2xl text-gray-700">{t.faq.title[lang]}</h1>
+                    <p className="mt-1 tracking-[0.3em] text-gray-500 text-[10px] sm:text-xs">{t.faq.sub[lang]}</p>
                     <div className="w-16 h-[3px] bg-red-600 mt-3" />
 
-                    <p className="mt-10 text-gray-700 text-[15px] flex flex-wrap items-center gap-3">
+                    <p className="mt-8 sm:mt-10 text-gray-700 text-sm sm:text-[15px] flex flex-wrap items-center gap-2 sm:gap-3">
                         <span>{t.faq.intro[lang]}</span>
                         <a
                             href="tel:0224203808"
-                            className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white rounded-md px-4 py-1.5 text-sm"
+                            className="inline-flex items-center gap-2 bg-[#1976d2] hover:bg-[#0d47a1] text-white rounded-md px-4 py-1.5 text-sm"
                         >
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 00-1.02.24l-2.2 2.2a15.07 15.07 0 01-6.58-6.58l2.2-2.21a1 1 0 00.24-1.01A11.36 11.36 0 018.5 4a1 1 0 00-1-1H4a1 1 0 00-1 1 17 17 0 0017 17 1 1 0 001-1v-3.5a1 1 0 00-1-1z" />
@@ -38,7 +38,7 @@ export default function FAQPage() {
                         <span>{t.faq.or[lang]}</span>
                         <a
                             href="#contact"
-                            className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white rounded-md px-4 py-1.5 text-sm"
+                            className="inline-flex items-center gap-2 bg-[#1976d2] hover:bg-[#0d47a1] text-white rounded-md px-4 py-1.5 text-sm"
                         >
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -48,13 +48,13 @@ export default function FAQPage() {
                         </a>
                     </p>
 
-                    <div className="mt-10 space-y-8">
+                    <div className="mt-8 sm:mt-10 space-y-6 sm:space-y-8">
                         {items.map((f, i) => (
                             <div key={i}>
-                                <p className="font-bold italic text-gray-800 text-[15px]">
+                                <p className="font-bold italic text-gray-800 text-sm sm:text-[15px]">
                                     {t.faq.tanya[lang]} : {f.q}
                                 </p>
-                                <div className="mt-2 text-gray-700 text-[15px] leading-relaxed">
+                                <div className="mt-2 text-gray-700 text-sm sm:text-[15px] leading-relaxed">
                                     <span>{t.faq.jawab[lang]} : </span>
                                     {f.a}
                                     {"list" in f && f.list && (
